@@ -1,5 +1,5 @@
 import React from "react";
-import "SearchBar.css";
+import "./SearchBar.css";
 
 const sortByOptions = {
     "Best Match": "best_match",
@@ -11,7 +11,7 @@ export default class SearchBar extends React.Component {
     renderSortByOptions() {
         return Object.keys(sortByOptions).map((sortByOption) => {
             // Retrieves the value of that key (i.e. "best_match")
-            let SortByOptionValue = SortByOptions[sortByOption];
+            let SortByOptionValue = sortByOptions[sortByOption];
             // Gives a list element with the sort option and the value as its reference key
             return <li key={SortByOptionValue}>{sortByOption}</li>;
         });
@@ -23,7 +23,7 @@ export default class SearchBar extends React.Component {
                 <div className="SearchBar-sort-options">
                     <ul>{this.renderSortByOptions()}</ul>
                 </div>
-                <div clasName="SearchBar-fields">
+                <div className="SearchBar-fields">
                     <input placeholder="Search Businesses" />
                     <input placeholder="Where?" />
                 </div>
