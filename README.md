@@ -1,7 +1,7 @@
 # Ravenous - Codecademy Project
 React app  project that searches for businesses using Yelp's API and returns information about them. Follows Codecademy's overarching project for their react tutorial.
 
-## Published App
+## Hosted App
 https://4upz.github.io/Ravenous/
 
 --------------------------------------------------------------------------------------------------------
