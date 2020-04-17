@@ -26,6 +26,7 @@ export default class SearchBar extends React.Component {
 
     handleSortByChange(sortByOption) {
         this.setState({ sortBy: sortByOption });
+        this.startSearch();
     }
 
     handleTermChange(event) {
@@ -39,12 +40,17 @@ export default class SearchBar extends React.Component {
     }
 
     handleSearch(event) {
+        this.startSearch();
+        event.preventDefault();
+    }
+
+    // Starts a new yelp search and refreshes the results
+    startSearch() {
         this.props.searchYelp(
             this.state.term,
             this.state.location,
             this.state.sortBy
         );
-        event.preventDefault();
     }
 
     renderSortByOptions() {
@@ -84,6 +90,7 @@ export default class SearchBar extends React.Component {
                     />
                 </div>
                 <div onClick={this.handleSearch} className="SearchBar-submit">
+                    {/* Using a link as a button isn't a good accessibility practice, but we'll fix this later*/}
                     <a>Let's Go</a>
                 </div>
             </div>
