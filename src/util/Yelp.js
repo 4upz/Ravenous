@@ -1,5 +1,5 @@
-const apiKey =
-    "0daR1W7kCwlmdZJ55B0izCa3jE61QNupYClwqMk-Hi4kYu-sZGB90Ep4BW7y-ioix9KvDfyGiVxdkL29cs8JDtwA0GNSA5X1DE5Mz3BSpU3K2Ap5u4snF0o3adKYXnYx";
+// Use your super secret API KEY
+const apiKey = process.env.REACT_APP_YELP_API_KEY;
 
 const Yelp = {
     search(term, location, sortBy) {
